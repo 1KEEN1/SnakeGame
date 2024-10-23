@@ -1,7 +1,9 @@
 #include "snake.hpp"
 
 Snake::Snake() {
-    snake_ = { {0, 0} };
+    // Test numbers for the size of the Snake
+    // Need to be deleted
+    snake_ = { {10, 10}, {11, 10}, {12, 10} };
 }
 
 Snake::~Snake() {
