@@ -6,16 +6,19 @@
 
 const int cellSize = 10;
 
+enum class Direction {
+    Up,
+    Down,
+    Left,
+    Right
+};
+
 class Snake {
     public:
         Snake();
         ~Snake();
 
-        // void moveUp();
-        // void moveDown();
-        // void moveRight();
-        // void moveLeft();
-
+        void move(Direction direction);
         void printSnake(sf::RenderWindow& window);
 
     private:
