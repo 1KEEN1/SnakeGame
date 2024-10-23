@@ -1,0 +1,1 @@
+add_executable(snakeLib snake.cpp snake.hpp)

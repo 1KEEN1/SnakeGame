@@ -6,22 +6,17 @@
 
 const int cellSize = 10;
 
-enum class Direction {
-    Up,
-    Down,
-    Left,
-    Right
-};
+enum class Direction { Up, Down, Left, Right };
 
 class Snake {
-    public:
-        Snake();
-        ~Snake();
+public:
+  Snake();
+  ~Snake();
 
-        void move(Direction direction);
-        void printSnake(sf::RenderWindow& window);
+  void move(Direction direction);
+  void printSnake(sf::RenderWindow &window);
 
-    private:
-        // 2D Vector for snake cords
-        std::vector<sf::Vector2i> snake_;
+private:
+  // 2D Vector for snake cords
+  std::vector<sf::Vector2i> snake_;
 };
