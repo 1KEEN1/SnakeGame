@@ -1,3 +1,4 @@
+#include "src/fruit.hpp"
 #include "src/snake.hpp"
 #include <SFML/Graphics.hpp>
 
@@ -7,6 +8,8 @@ int main() {
 
   Snake snake;
   Direction direction = Direction::Right;
+
+  Fruit fruit;
 
   // Run the program as long as the window is open
   while (window.isOpen()) {
@@ -39,7 +42,12 @@ int main() {
     }
 
     window.clear();
+
+    sf::Vector2u windowSize = window.getSize();
+    fruit.spawnFruit(snake, windowSize);
+    fruit.drawFruit(window);
     snake.drawSnake(window);
+
     window.display();
 
     // Movement speed of the Snake
