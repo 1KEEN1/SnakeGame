@@ -33,8 +33,13 @@ int main() {
 
     snake.move(direction);
 
+    // Checks if Snake didn't crashed into the wall
+    if (snake.isAlive()) {
+      window.close();
+    }
+
     window.clear();
-    snake.printSnake(window);
+    snake.drawSnake(window);
     window.display();
 
     // Movement speed of the Snake

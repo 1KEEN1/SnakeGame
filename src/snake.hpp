@@ -14,7 +14,8 @@ public:
   ~Snake();
 
   void move(Direction direction);
-  void printSnake(sf::RenderWindow &window);
+  void drawSnake(sf::RenderWindow &window);
+  bool isAlive();
 
 private:
   // 2D Vector for snake cords
