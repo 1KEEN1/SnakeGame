@@ -4,8 +4,6 @@
 #include <iostream>
 #include <vector>
 
-const int cellSize = 10;
-
 enum class Direction { Up, Down, Left, Right };
 
 class Snake {
@@ -20,4 +18,5 @@ public:
 private:
   // 2D Vector for snake cords
   std::vector<sf::Vector2i> snake_;
+  int cellSize = 10;
 };
