@@ -15,6 +15,8 @@ public:
   void drawSnake(sf::RenderWindow &window);
   bool isAlive();
 
+  sf::Vector2f getHeadPosition();
+
 private:
   // 2D Vector for snake cords
   std::vector<sf::Vector2i> snake_;

@@ -48,3 +48,8 @@ bool Snake::isAlive() {
   sf::Vector2i head = snake_.front();
   return ((head.x == 0 || head.x == 80) || ((head.y == 0) || (head.y == 60)));
 }
+
+sf::Vector2f Snake::getHeadPosition() {
+  sf::Vector2i head = snake_.front();
+  return sf::Vector2f(head.x, head.y);
+}
