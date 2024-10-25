@@ -41,10 +41,15 @@ int main() {
       window.close();
     }
 
+    if (fruit.isFruitSpawned() &&
+        snake.getHeadPosition() == fruit.getFruitPositionInCells()) {
+      snake.grow();
+      fruit.resetFruit();
+    }
+
     window.clear();
 
-    sf::Vector2u windowSize = window.getSize();
-    fruit.spawnFruit(snake, windowSize);
+    fruit.generateFruit(snake);
     fruit.drawFruit(window);
     snake.drawSnake(window);
 
