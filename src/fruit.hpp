@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <cmath>
 #include <ctime>
 #include <iostream>
 #include <stdlib.h>
@@ -11,8 +12,13 @@ class Fruit {
 public:
   Fruit();
 
-  void spawnFruit(Snake &snake, const sf::Vector2u &windowSize);
+  void generateFruit(Snake snake);
   void drawFruit(sf::RenderWindow &window);
+
+  bool isFruitSpawned() const;
+  void resetFruit();
+
+  sf::Vector2f getFruitPositionInCells() const;
 
 private:
   sf::RectangleShape fruit_;
